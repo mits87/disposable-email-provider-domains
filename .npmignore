@@ -1,5 +1,5 @@
 coverage/
-data/
+
 dist/*.php
 node_modules/
 test/
@@ -15,6 +15,7 @@ gulpfile.js
 index.tpl.d.ts
 rollup.*
 *.test.*
+*.spec.*
 
 bower.json
 composer.*
