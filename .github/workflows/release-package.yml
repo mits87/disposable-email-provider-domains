@@ -15,23 +15,11 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  publish-to-npmjs:
+  publish-to-github:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
-      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -40,3 +28,17 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-to-npmjs:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

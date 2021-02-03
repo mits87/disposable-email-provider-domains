@@ -1,6 +1,6 @@
 {
   "name": "disposable-email-provider-domains",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package with disposable email provider domains",
   "main": "index.js",
   "scripts": {
