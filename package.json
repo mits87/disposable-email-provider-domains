@@ -1,6 +1,6 @@
 {
   "name": "disposable-email-provider-domains",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A package with disposable email provider domains",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "javascript",
     "nodejs",
     "blacklist",
-    "email-blacklist"
+    "email-blacklist",
+    "disposable"
   ],
   "author": "Piotr Krajewski <mits87@gmail.com>",
   "license": "MIT",
