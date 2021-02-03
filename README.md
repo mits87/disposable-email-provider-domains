@@ -1,4 +1,4 @@
-# Node Email Domain Blacklist
+# Node Disposable Email Provider Domains List
 
 A nodejs wrapper for the disposable email provider domains list.
 
@@ -7,15 +7,15 @@ A nodejs wrapper for the disposable email provider domains list.
 Require this package with composer:
 
 ```
-npm install email-domain-blacklist
+npm install disposable-email-provider-domains
 ```
 
 # Usage
 
-Require `email-domain-blacklist` to your file.
+Require `disposable-email-provider-domains` to your file.
 
 ```js
-const { domains } = require('email-domain-blacklist');
+const { domains } = require('disposable-email-provider-domains');
 
 console.log(domains);
 ```
